@@ -1,0 +1,39 @@
+.button-signin {
+  margin-top: 6%;
+  height: 40;
+  width: 50%;
+  border-radius: 20;
+}
+
+.button-forgot {
+  margin-top: 2%;
+}
+
+.button-signup {
+  vertical-align: bottom;
+}
+
+.logo {
+  margin-top: 15%;
+  width: 150;
+  height: 80;
+}
+
+.username, .pass {
+  width: 70%;
+  border-bottom-width: 1;
+  border-color: white;
+}
+
+.username {
+  margin-top: 12%;
+}
+
+.pass {
+  margin-top: 5%;
+}
+
+.kk {
+  margin-top: 10%;
+  width: 80;
+}

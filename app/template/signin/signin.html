@@ -1,0 +1,14 @@
+<StackLayout class="full back-black">
+  <Image class="logo" src="~/images/logo.png"></Image>
+  <TextField class="username col-white" hint="Email Address"
+    [(ngModel)]="user.email" keyboardType="email"
+    autocorrect="false" autocapitalizationType="none"></TextField>
+  <TextField class="pass col-white" hint="Password" [(ngModel)]="user.password"
+    (loaded)="passwordFieldLoaded($event)"></TextField>
+  <Button class="button-signin back-red col-white" text="SIGN IN" (tap)="signin()"></Button>
+  <Button class="button-forgot col-white back-black" text="Forgot your pasword?" (tap)="forgot()"></Button>
+  <StackLayout orientation="horizontal" class="kk">
+    <Button class="back-black col-white" text="SIGN UP" (tap)="signup()"></Button>
+    <Label class="mdi col-white" [text]="'mdi-arrow-forward' | fonticon"></Label>
+  </StackLayout>
+</StackLayout>

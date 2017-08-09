@@ -1,0 +1,17 @@
+<GridLayout tkExampleTitle tkToggleNavButton>
+    <RadListView #listView [items]="fasks" loadOnDemandMode="Manual"
+      (loadMoreDataRequested)="onLoadMoreItemsRequested($event)"
+      pullToRefresh="true" (pullToRefreshInitiated)="onPullToRefreshInitiated($event)">
+        <ng-template tkListItemTemplate let-item="item">
+            <StackLayout orientation="vertical" class="item">
+                <Label class="item-title" text="{{ item.question_by_first + ' ' + item.question_by_last }}"></Label>
+                <TextView class="item-description t4" underlineColorAndroid="rgba(0,0,0,0)" text="{{ item.question_text }}" [editable]="false"></TextView>
+                <WrapLayout orienation="horizontal" class="item-buttons">
+                  <Button thisitem="{{item.question_id}}" class="item-button back-red col-white button-fanswer" text="Fanswer" (tap)="onFanswer($event)"></Button>
+                  <Button thisitem="{{item.question_id}}" class="item-button back-white button-comment" text="Comment" (tap)="onComment($event)"></Button>
+                  <Button thisitem="{{item.question_id}}" class="item-button back-white button-like" text="Like" (tap)="onLike($event)"></Button>
+                </WrapLayout>
+            </StackLayout>
+        </ng-template>
+    </RadListView>
+</GridLayout>

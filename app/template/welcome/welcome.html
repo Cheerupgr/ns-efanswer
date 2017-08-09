@@ -1,0 +1,11 @@
+<StackLayout class="full back-black" >
+  <Image class="logo" src="~/images/logo.png"></Image>
+  <Label class="T0 welcome col-white" text="Welcome Star!" textWrap="true"></Label>
+  <Label class="t3 desc col-white" text="{{walkthrough_text}}" textWrap="true"></Label>
+  <Button class="button-start back-red col-white" text="GET STARTED" (tap)="getStart()"></Button>
+  <StackLayout class="indicators-cover" width="{{indicators_width}}">
+    <WrapLayout class="indicators">
+      <Label text="" *ngFor="let item of walkthroughs; let i = index" class="indicator" opacity="{{getOpacity(i)}}"></Label>
+    </WrapLayout>
+  </StackLayout>
+</StackLayout>

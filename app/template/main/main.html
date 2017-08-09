@@ -1,0 +1,34 @@
+<RadSideDrawer (drawerOpening)="onDrawerOpening()" (drawerOpened)="onDrawerOpened()" (drawerClosing)="onDrawerClosing()"
+    (drawerClosed)="onDrawerClosed()" [transition]="sideDrawerTransition" tkExampleTitle tkToggleNavButton>
+    <!-- << angular-sidedrawer-callbacks -->
+    <StackLayout tkDrawerContent class="back-black back-cover">
+      <StackLayout class="sideTitleStackLayout">
+        <Image class="account-img" src="{{ background_image }}"></Image>
+      </StackLayout>
+      <ScrollView>
+        <StackLayout class="sideStackLayout">
+          <Button class="col-white back-no t3 side-item" text="HOME"></Button>
+          <Button class="col-white back-no t3 side-item" text="ALL FASK >" (tap)="showAllFask()"></Button>
+          <Button class="col-white back-no t3 side-item" text="CHAPTER >" (tap)="showAllChapter()"></Button>
+          <Button class="col-white back-no t3 side-item" text="VERIFY >" (tap)="showAllVerify()"></Button>
+          <Button class="col-white back-no t3 side-item" text="VIDEO FASK >" (tap)="showAllVFask()"></Button>
+          <Button class="col-white back-no t3 side-item" text="CELEBRATION >" (tap)="showAllCelebration()"></Button>
+          <Button class="col-white back-no t3" text="Log out" (tap)="logout()"></Button>
+        </StackLayout>
+      </ScrollView>
+    </StackLayout>
+    <StackLayout tkMainContent class="full back-white col-black">
+      <ActionBar title="{{ title }}" class="col-red">
+          <NavigationButton icon="res://menu" (tap)="openDrawer()" ios:visibility="collapse"></NavigationButton>
+        <ActionItem icon="res://menu" ios.position="left" (tap)="openDrawer()" android:visibility="collapse"></ActionItem>
+      </ActionBar>
+      <AbsoluteLayout class="top-bar" orientation="horizontal" >
+        <Label class="remaining" text="REMAINING FASK"></Label>
+        <Label class="count" text="12"></Label>
+      </AbsoluteLayout>
+      <!-- <Label text="Drawer notification: " class="drawerContentText"></Label>
+      <Label [text]="currentNotification" class="drawerContentText"></Label> -->
+      <router-outlet name="mainoutlet">
+      </router-outlet>
+    </StackLayout>
+</RadSideDrawer>

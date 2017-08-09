@@ -1,0 +1,83 @@
+.item {
+  border-bottom-width: 1;
+  border-bottom-color: rgba(216, 216, 216, 1);
+}
+
+.item-title {
+  font-size: 16;
+  padding-top: 20;
+  padding-left: 10;
+  padding-right: 10;
+}
+
+.item-description {
+  color: gray;
+  padding: 8;
+  background-color: white;
+}
+
+.item-comment {
+  color: black;
+  margin-top: 20;
+  border-radius: 6;
+  padding: 10;
+  background-color: #EDEBEC;
+  width: 90%;
+  height: 160;
+}
+
+.item-buttons {
+  width: 100%;
+  height: 44;
+  margin-top: 14;
+}
+
+.item-button {
+  width: 28%;
+  height: 40;
+  margin: 2%;
+  border-radius: 20;
+  box-shadow: 10 10 5 10 black;
+  border-width: 1;
+  font-size: 10;
+}
+
+.bottom-buttons {
+  width: 168;
+  height: 44;
+  margin-top: 14;
+  margin-bottom: 20;
+}
+
+.bottom-button {
+  width: 44;
+  height: 44;
+  margin-left: 20;
+  margin-right: 20;
+  border-radius: 22;
+  border-width: 1;
+}
+
+.button-fanswer {
+  border-color: #A63230;
+}
+
+.button-like {
+  border-color: #D5D5D5;
+  color: gray;
+}
+
+.button-comment {
+  border-color: #CC2926;
+  color: #CC2926;
+}
+
+.button-cancel {
+  background-color: #E93826;
+  border-color: #C02D1E;
+}
+
+.button-ok {
+  background-color: #2DD290;
+  border-color: #26AD77;
+}

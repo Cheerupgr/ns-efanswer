@@ -1,0 +1,44 @@
+.item {
+  border-bottom-width: 1;
+  border-bottom-color: rgba(216, 216, 216, 1);
+}
+
+.item-title {
+  font-size: 16;
+  padding-top: 20;
+  padding-left: 10;
+  padding-right: 10;
+  text-transform: capitalize;
+}
+
+.item-description {
+  color: gray;
+  padding: 8;
+  background-color: white;
+}
+
+.item-buttons {
+  width: 100%;
+  height: 44;
+  margin: 10%;
+  margin-bottom: 20;
+}
+
+.item-button {
+  width: 28%;
+  height: 40;
+  margin: 2%;
+  border-radius: 20;
+  box-shadow: 10 10 5 10 black;
+  border-width: 1;
+  font-size: 10;
+}
+
+.button-fanswer {
+  border-color: #A63230;
+}
+
+.button-comment, .button-like {
+  border-color: #D5D5D5;
+  color: gray;
+}

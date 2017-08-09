@@ -1,0 +1,24 @@
+<GridLayout tkExampleTitle tkToggleNavButton>
+  <ScrollView>
+    <StackLayout id="layout" orientation="vertical" class="item">
+        <Label class="item-title" text="{{ item.question_by_first + ' ' + item.question_by_last }}"></Label>
+        <TextView class="item-description t4" text="{{ item.question_text }}" [editable]="false"></TextView>
+        <WrapLayout orienation="horizontal" class="item-buttons">
+          <Button class="item-button back-red col-white button-fanswer"  text="Fanswer" (tap)="onFanswer(item)"></Button>
+          <Button class="item-button back-white button-comment" text="Comment" (tap)="onComment(item)"></Button>
+          <Button class="item-button back-white button-like" text="Like" (tap)="onLike(item)"></Button>
+        </WrapLayout>
+
+        <TextView id="textView" class="item-comment t4" [(ngModel)]="item.answer_text"></TextView>
+        <WrapLayout orienation="horizontal" class="middle-buttons">
+          <Button class="middle-button col-white" text="{{getAudioButtonTitle()}}" (tap)="addAudio(item)"></Button>
+          <Button class="middle-button col-white" text="{{getVideoButtonTitle()}}" (tap)="getVideo()"></Button>
+        </WrapLayout>
+
+        <WrapLayout orienation="horizontal" class="bottom-buttons">
+          <Button class="mdi bottom-button col-white button-cancel" [text]="'mdi-close' | fonticon" (tap)="onCancel()"></Button>
+          <Button class="mdi bottom-button col-white button-ok" [text]="'mdi-check' | fonticon" (tap)="onOk()"></Button>
+        </WrapLayout>
+    </StackLayout>
+  </ScrollView>
+</GridLayout>

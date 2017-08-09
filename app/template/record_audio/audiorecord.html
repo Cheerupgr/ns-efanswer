@@ -1,0 +1,15 @@
+<StackLayout class="full back-white">
+  <Button class="mdi col-black back-button back-white" [text]="'mdi-keyboard-backspace' | fonticon" (tap)="backToItem()"></Button>
+  <StackLayout orientation="horizontal" class="recording">
+    <Label class="record-mark"></Label>
+    <Label class="t4" text=" Recording"></Label>
+  </StackLayout>
+  <Label class="col-black time-view" text="{{durationTime}}"></Label>
+  <StackLayout orientation="horizontal" class="bottom-buttons">
+    <Button class="mdi button-left" [text]="'mdi-library-books' | fonticon"></Button>
+    <Button class="mdi record-button" [text]="'mdi-play-arrow' | fonticon" (tap)="playRecordedFile($event)"></Button>
+    <Button class="mdi record-button" [text]="'mdi-fiber-manual-record' | fonticon" (tap)="recordStart($event)" [visibility]="recordState==0 ? 'visible' : 'collapse'"></Button>
+    <Button class="mdi record-button" [text]="'mdi-stop' | fonticon" (tap)="recordStop($event)" [visibility]="recordState==1 ? 'visible' : 'collapse'"></Button>
+    <Button class="mdi button-right" [text]="'mdi-tune' | fonticon"></Button>
+  </StackLayout>
+</StackLayout>

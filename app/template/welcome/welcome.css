@@ -1,0 +1,40 @@
+.button-start {
+  margin-top: 16%;
+  height: 40;
+  width: 50%;
+  border-radius: 20;
+}
+
+.logo {
+  margin-top: 15%;
+  width: 150;
+  height: 80;
+}
+
+.welcome {
+  margin-top: 15%;
+}
+
+.desc {
+  margin-top: 4;
+  width: 60%;
+}
+
+.indicators-cover {
+  width: 100%;
+  horizontal-align: center;
+  margin-top: 6%;
+}
+
+.indicators {
+  width: 200;
+}
+
+.indicator {
+  width: 10;
+  height: 10;
+  background-color: white;
+  border-radius: 5;
+  margin-left: 10;
+  margin-right: 10;
+}
